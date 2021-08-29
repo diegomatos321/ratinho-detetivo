@@ -7,44 +7,29 @@ public class PlayerController : MonoBehaviour
 {
   [SerializeField] private float playerSpeed = 250;
 
-  private PlayerInputsActions playerInputsActions;
-  private InputAction movementInput;
-  private Vector2 velocityVector = Vector2.zero;
+  private Vector2 movementVector = Vector2.zero;
   private Rigidbody2D playerRigidBody;
 
   private void Awake() 
   {
-    playerInputsActions = new PlayerInputsActions();
     playerRigidBody = GetComponent<Rigidbody2D>();
-  }
-
-  private void OnEnable() 
-  {
-    movementInput = playerInputsActions.OnFoot.Movement;
-    movementInput.Enable();
   }
 
   private void FixedUpdate() 
   {
     HandlePlayerMovement();
-    Debug.Log("Velocidade: " + velocityVector);
   }
 
   private void HandlePlayerMovement()
   {
-    Vector2 inputVector = movementInput.ReadValue<Vector2>();
-
-    velocityVector.x = playerSpeed * inputVector.x * Time.deltaTime;
-    velocityVector.y = playerSpeed * inputVector.y * Time.deltaTime;
-
-    // playerRigidBody.AddForce(velocityVector);
-    playerRigidBody.velocity = velocityVector;
+    playerRigidBody.velocity = movementVector;
   }
 
-  private void OnDisable() 
+  public void OnActionMovement(InputAction.CallbackContext context) 
   {
-    movementInput.Disable();
-    playerInputsActions.OnFoot.Movement.Disable();
-  }
+    Vector2 rawInputMovement = context.ReadValue<Vector2>();
 
+    movementVector.x = playerSpeed * rawInputMovement.x * Time.deltaTime;
+    movementVector.y = playerSpeed * rawInputMovement.y * Time.deltaTime;
+  }
 }
