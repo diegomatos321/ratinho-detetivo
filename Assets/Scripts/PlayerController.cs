@@ -22,14 +22,13 @@ public class PlayerController : MonoBehaviour
 
   private void HandlePlayerMovement()
   {
-    playerRigidBody.velocity = movementVector;
+    playerRigidBody.velocity = movementVector * Time.deltaTime;
   }
 
   public void OnActionMovement(InputAction.CallbackContext context) 
   {
     Vector2 rawInputMovement = context.ReadValue<Vector2>();
 
-    movementVector.x = playerSpeed * rawInputMovement.x * Time.deltaTime;
-    movementVector.y = playerSpeed * rawInputMovement.y * Time.deltaTime;
+    movementVector = rawInputMovement * playerSpeed;
   }
 }
