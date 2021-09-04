@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Player
   - Characters
-  - 
+  - Objects
   - 
   - 
   - 
@@ -41,9 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Enviroment
-    uniqueID: 133179809
+  - name: Chao
+    uniqueID: 3687751537
     locked: 0
-  - name: Characters
-    uniqueID: 3347311461
+  - name: Nivel 1
+    uniqueID: 2966271481
     locked: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-  [SerializeField] private float playerSpeed = 250;
+  [SerializeField] private float playerSpeed = 3000;
 
   private Vector2 movementVector = Vector2.zero;
   private Rigidbody2D playerRigidBody;
@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
   private void HandlePlayerMovement()
   {
     playerRigidBody.velocity = movementVector * Time.deltaTime;
+    // playerRigidBody.AddForce(movementVector);
   }
 
   public void OnActionMovement(InputAction.CallbackContext context) 
