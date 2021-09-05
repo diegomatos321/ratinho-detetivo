@@ -413,14 +413,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5078724456400775414, guid: b852f420eceb08f44823cbd289beb160, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5078724456400775414, guid: b852f420eceb08f44823cbd289beb160, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -607215759
-      objectReference: {fileID: 0}
     - target: {fileID: 7647689227554216343, guid: b852f420eceb08f44823cbd289beb160, type: 3}
       propertyPath: m_Name
       value: moveble_object
@@ -3144,7 +3136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8268017187922466606, guid: edead15a3284a054aa8e2230a28013f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.85
       objectReference: {fileID: 0}
     - target: {fileID: 8268017187922466606, guid: edead15a3284a054aa8e2230a28013f4, type: 3}
       propertyPath: m_LocalPosition.y
