@@ -42,18 +42,32 @@ public class PlayerController : MonoBehaviour
 
   private void FixedUpdate()
   {
-    HandlePlayerMovement();
+    switch (currentState)
+    {
+      case States.IDLE:
+        Stop();
+        break;
+      case States.WALKING:
+        Move();
+        break;
+    }  
   }
 
   private void KeepMovementProportionalToFramerate()
   {
     movementVector = rawInputMovement * playerSpeed * Time.deltaTime;
   }
+  
+  private void Stop()
+  {
+    playerRigidBody.velocity = Vector2.zero;
+  }
 
-  private void HandlePlayerMovement()
+  private void Move()
   {
     playerRigidBody.velocity = movementVector;
   }
+
 
   private void PlayAnimation(States animationToPlay)
   {
