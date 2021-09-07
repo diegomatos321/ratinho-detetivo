@@ -11,13 +11,14 @@ public class PlayerController : MonoBehaviour
     WALKING
   }
 
-  [SerializeField] private float playerSpeed = 250;
+  [SerializeField] private float playerSpeed = 6;
 
   private Rigidbody2D playerRigidBody;
   private Animator playerAnimator;
   private Vector2 movementVector = Vector2.zero;
   private Vector2 rawInputMovement = Vector2.zero;
   private States currentState = States.IDLE;
+  private string currentAnimation = "Idle";
 
   private void Awake()
   {
@@ -27,8 +28,6 @@ public class PlayerController : MonoBehaviour
 
   private void Update()
   {
-    KeepMovementProportionalToFramerate();
-
     switch (currentState)
     {
       case States.IDLE:
@@ -53,11 +52,6 @@ public class PlayerController : MonoBehaviour
     }  
   }
 
-  private void KeepMovementProportionalToFramerate()
-  {
-    movementVector = rawInputMovement * playerSpeed * Time.deltaTime;
-  }
-  
   private void Stop()
   {
     playerRigidBody.velocity = Vector2.zero;
@@ -65,15 +59,15 @@ public class PlayerController : MonoBehaviour
 
   private void Move()
   {
-    playerRigidBody.velocity = movementVector;
+    playerRigidBody.velocity = rawInputMovement * playerSpeed;
   }
-
 
   private void PlayAnimation(States animationToPlay)
   {
     if (animationToPlay == States.IDLE)
     {
       playerAnimator.speed = 0;
+      playerAnimator.Play(currentAnimation, 0, 0);
     }
     else if (animationToPlay == States.WALKING)
     {
@@ -82,18 +76,22 @@ public class PlayerController : MonoBehaviour
       if (rawInputMovement.y > 0)
       {
         playerAnimator.Play("WalkingNorth", 0);
+        currentAnimation = "WalkingNorth";
       }
       else if (rawInputMovement.y < 0)
       {
         playerAnimator.Play("WalkingSouth", 0);
+        currentAnimation = "WalkingSouth";
       }
       else if (rawInputMovement.x > 0)
       {
         playerAnimator.Play("WalkingWest", 0);
+        currentAnimation = "WalkingWest";
       }
       else if (rawInputMovement.x < 0)
       {
         playerAnimator.Play("WalkingEast", 0);
+        currentAnimation = "WalkingEast";
       }
     }
   }
