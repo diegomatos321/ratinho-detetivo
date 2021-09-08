@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
 
   private Rigidbody2D playerRigidBody;
   private Animator playerAnimator;
-  private Vector2 movementVector = Vector2.zero;
   private Vector2 rawInputMovement = Vector2.zero;
   private States currentState = States.IDLE;
   private string currentAnimation = "Idle";

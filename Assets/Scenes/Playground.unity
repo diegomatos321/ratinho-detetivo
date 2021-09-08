@@ -3126,6 +3126,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8268017187922466604, guid: edead15a3284a054aa8e2230a28013f4, type: 3}
+      propertyPath: m_Mass
+      value: 0.27999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268017187922466604, guid: edead15a3284a054aa8e2230a28013f4, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268017187922466604, guid: edead15a3284a054aa8e2230a28013f4, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8268017187922466605, guid: edead15a3284a054aa8e2230a28013f4, type: 3}
       propertyPath: m_Name
       value: Player
