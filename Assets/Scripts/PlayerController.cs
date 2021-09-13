@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     WALKING
   }
 
-  [SerializeField] private float playerSpeed = 6;
+  [SerializeField] private float playerSpeed;
 
   private Rigidbody2D playerRigidBody;
   private Animator playerAnimator;
