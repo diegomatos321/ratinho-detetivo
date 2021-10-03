@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 672864357}
     m_Modifications:
+    - target: {fileID: 890149201224324230, guid: eb3cf94cf4efde24bbf02d5b8b898ecc, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4728535873362290256, guid: eb3cf94cf4efde24bbf02d5b8b898ecc, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -199,6 +203,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 672864357}
     m_Modifications:
+    - target: {fileID: 890149201224324230, guid: eb3cf94cf4efde24bbf02d5b8b898ecc, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4728535873362290256, guid: eb3cf94cf4efde24bbf02d5b8b898ecc, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -485,7 +493,7 @@ GameObject:
   - component: {fileID: 672864357}
   - component: {fileID: 672864359}
   - component: {fileID: 672864358}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enviroment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,6 +709,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 672864357}
     m_Modifications:
+    - target: {fileID: 890149201224324230, guid: eb3cf94cf4efde24bbf02d5b8b898ecc, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4728535873362290256, guid: eb3cf94cf4efde24bbf02d5b8b898ecc, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -788,8 +800,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1445339744}
   - component: {fileID: 1445339743}
-  m_Layer: 0
-  m_Name: Grid
+  m_Layer: 10
+  m_Name: Altura0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -820,6 +832,7 @@ Transform:
   m_Children:
   - {fileID: 2070019975}
   - {fileID: 672864357}
+  - {fileID: 1432626479}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -830,6 +843,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 672864357}
     m_Modifications:
+    - target: {fileID: 2986482176950560523, guid: 7873c23c541ba6044ab2c44ef7c6ebb7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3433585695501812812, guid: 7873c23c541ba6044ab2c44ef7c6ebb7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -909,6 +926,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 672864357}
     m_Modifications:
+    - target: {fileID: 890149201224324230, guid: eb3cf94cf4efde24bbf02d5b8b898ecc, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4728535873362290256, guid: eb3cf94cf4efde24bbf02d5b8b898ecc, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -978,6 +999,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 672864357}
     m_Modifications:
+    - target: {fileID: 890149201224324230, guid: eb3cf94cf4efde24bbf02d5b8b898ecc, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4728535873362290256, guid: eb3cf94cf4efde24bbf02d5b8b898ecc, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -1051,7 +1076,7 @@ GameObject:
   - component: {fileID: 2070019975}
   - component: {fileID: 2070019977}
   - component: {fileID: 2070019976}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1109,9 +1134,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -607215759
+  m_SortingLayer: 1
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -3308,11 +3333,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8268017187922466606, guid: edead15a3284a054aa8e2230a28013f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.67
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 8268017187922466606, guid: edead15a3284a054aa8e2230a28013f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 1.22
       objectReference: {fileID: 0}
     - target: {fileID: 8268017187922466606, guid: edead15a3284a054aa8e2230a28013f4, type: 3}
       propertyPath: m_LocalPosition.z
