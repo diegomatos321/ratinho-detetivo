@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1825ba0a0930fb84fab73ab9c0e01a63, type: 3}
+  m_Name: example_A_002
+  m_EditorClassIdentifier: 
+  personagem: {fileID: 11400000, guid: bedb83397cf098147acf50cd1aec5936, type: 2}
+  texto: "Vivo aqui h\xE1 muito tempo !! Mas e voc\xEA ? Nunca te vi por aqui..."
+  proximoDialogo: {fileID: 0}
+  opcoes:
+  - Texto: Me mudei na semana passada
+    Dialogue: {fileID: 11400000, guid: 2c1b61edcda0d2d4b8037498a6e4dfdb, type: 2}
+  - Texto: "Eu sou novo na regi\xE3o"
+    Dialogue: {fileID: 11400000, guid: 49a888cd4f867094a83a883472d79aaa, type: 2}

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1825ba0a0930fb84fab73ab9c0e01a63, type: 3}
+  m_Name: example_A_003
+  m_EditorClassIdentifier: 
+  personagem: {fileID: 11400000, guid: bedb83397cf098147acf50cd1aec5936, type: 2}
+  texto: "Nossa que legal ! Eu me chamo Barata, moro aqui desde que nasci. Sempre
+    que quiser conversar, voce pode me encontrar perto daquela \xE1rvore."
