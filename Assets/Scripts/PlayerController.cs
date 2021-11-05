@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,6 +11,8 @@ public class PlayerController : MonoBehaviour
   }
 
   [SerializeField] private float playerSpeed;
+  [SerializeField] private UnityEvent OnDialogueStart;
+  [SerializeField] private UnityEvent OnDialogueNextLine;
 
   private Rigidbody2D playerRigidBody;
   private Animator playerAnimator;
@@ -113,9 +114,9 @@ public class PlayerController : MonoBehaviour
   {
     if(context.performed) {
       if(DialogueManager.Instance.hasStarted == false) {
-        DialogueManager.Instance.StartDialogue();
+        OnDialogueStart.Invoke();
       } else if (DialogueManager.Instance.hasStarted) {
-        DialogueManager.Instance.NextLine();
+        OnDialogueNextLine.Invoke();
       }
     }
   }
