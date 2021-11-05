@@ -108,4 +108,15 @@ public class PlayerController : MonoBehaviour
       currentState = States.WALKING;
     }
   }
+
+  public void OnActionInteract(InputAction.CallbackContext context) 
+  {
+    if(context.performed) {
+      if(DialogueManager.Instance.hasStarted == false) {
+        DialogueManager.Instance.StartDialogue();
+      } else if (DialogueManager.Instance.hasStarted) {
+        DialogueManager.Instance.NextLine();
+      }
+    }
+  }
 }
