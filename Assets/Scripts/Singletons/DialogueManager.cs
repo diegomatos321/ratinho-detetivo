@@ -40,17 +40,34 @@ public sealed class DialogueManager : MonoBehaviour {
     hasStarted = true;
     setUIInfo();
     showDialogueUI();
+    if(currentDialogue.opcoes.Count > 0) {
+      ShowOpcoes();
+    }
   }
 
   public void NextLine() {
     if(currentDialogue.opcoes.Count > 0) {
-      Debug.Log("Mostrar Opções");
+      currentDialogue = currentDialogue.opcoes[0].Dialogue;
     } else if (currentDialogue.proximoDialogo != null) {
-      Debug.Log("Ir para o proximo Dialogo");
       currentDialogue = currentDialogue.proximoDialogo;
-      setUIInfo();
     } else {
       Debug.Log("Dialogo acabou");
+      HideUI();
+      hasStarted = false;
+      return;
+    }
+
+    setUIInfo();
+    if(currentDialogue.opcoes.Count > 0)
+      ShowOpcoes();
+  }
+
+  private void ShowOpcoes() {
+    Debug.Log("===Mostrar Opções===");
+    int i = 0;
+    foreach (Opcoes opcao in currentDialogue.opcoes) {
+      Debug.Log(i + " - " + opcao.Texto);
+      i++;
     }
   }
 
